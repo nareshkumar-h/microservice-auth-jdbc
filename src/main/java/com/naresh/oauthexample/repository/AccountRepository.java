@@ -1,7 +1,8 @@
-package com.dazito.oauthexample.repository;
+package com.naresh.oauthexample.repository;
 
-import com.dazito.oauthexample.entities.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.naresh.oauthexample.entities.Account;
 
 import java.util.Optional;
 

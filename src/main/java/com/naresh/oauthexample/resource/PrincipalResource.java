@@ -1,4 +1,4 @@
-package com.dazito.oauthexample.resource;
+package com.naresh.oauthexample.resource;
 
 import java.security.Principal;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dazito.oauthexample.entities.CustomUser;
+import com.naresh.oauthexample.entities.CustomUser;
 
 @RestController
 public class PrincipalResource {

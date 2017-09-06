@@ -1,4 +1,4 @@
-package com.dazito.oauthexample.entities;
+package com.naresh.oauthexample.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.dazito.oauthexample.service;
+package com.naresh.oauthexample.service;
 
 import java.util.Optional;
 
@@ -9,9 +9,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.dazito.oauthexample.entities.Account;
-import com.dazito.oauthexample.entities.CustomUser;
-import com.dazito.oauthexample.repository.AccountRepository;
+import com.naresh.oauthexample.entities.Account;
+import com.naresh.oauthexample.entities.CustomUser;
+import com.naresh.oauthexample.repository.AccountRepository;
 
 /**
  * Created by daz on 29/06/2017.
