@@ -6,9 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.security.core.userdetails.User;
+
 @Entity
 @Table(name="account")
-public class Account {
+public class Account  {
 
     @Id
     @GeneratedValue
