@@ -1,4 +1,4 @@
-package com.naresh.oauthexample.service;
+package com.naresh.authservice.service;
 
 import java.util.Optional;
 
@@ -9,20 +9,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.naresh.oauthexample.entities.Account;
-import com.naresh.oauthexample.entities.CustomUser;
-import com.naresh.oauthexample.repository.AccountRepository;
+import com.naresh.authservice.dto.CustomUser;
+import com.naresh.authservice.model.User;
+import com.naresh.authservice.repository.UserRepository;
 
-/**
- * Created by daz on 29/06/2017.
- */
 @Service
 public class AccountUserDetailsService implements UserDetailsService {
 
-    private AccountRepository accountRepository;
+    private UserRepository accountRepository;
 
     @Autowired
-    public AccountUserDetailsService(AccountRepository accountRepository) {
+    public AccountUserDetailsService(UserRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
 
@@ -31,11 +28,11 @@ public class AccountUserDetailsService implements UserDetailsService {
     	
     	System.out.println("LoadByUsername:" + username );
         
-    	Optional<Account> findByUsername = accountRepository
+    	Optional<User> findByUsername = accountRepository
                 .findByUsername(username);
         
     	CustomUser user = findByUsername
-                .map(account -> new CustomUser(account.getId(), account.getUsername(), account.getPassword(), AuthorityUtils.createAuthorityList("ROLE_USER")))
+                .map(account -> new CustomUser(account.getId(), account.getUsername(), account.getPassword(), AuthorityUtils.createAuthorityList("ROLE_USER","ROLE_ADMIN")))
                 .orElseThrow(() -> new UsernameNotFoundException("Could not find " + username));
         
         System.out.println("LoadByUsername :" + user);

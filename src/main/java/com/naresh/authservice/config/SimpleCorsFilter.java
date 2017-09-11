@@ -1,4 +1,4 @@
-package com.naresh.oauthexample.config;
+package com.naresh.authservice.config;
 
 
 import java.io.IOException;
@@ -12,9 +12,13 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*@Component
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
-*/public class SimpleCorsFilter implements Filter {
+public class SimpleCorsFilter implements Filter {
 
     public SimpleCorsFilter() {
     }

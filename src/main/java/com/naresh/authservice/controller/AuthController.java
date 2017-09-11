@@ -1,4 +1,4 @@
-package com.naresh.oauthexample.resource;
+package com.naresh.authservice.controller;
 
 import java.security.Principal;
 
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.naresh.oauthexample.entities.CustomUser;
+import com.naresh.authservice.dto.CustomUser;
 
 @RestController
-public class PrincipalResource {
+public class AuthController {
 
 	@RequestMapping("/user")
 	public Principal oauth(Principal principal) {
@@ -39,5 +39,4 @@ public class PrincipalResource {
 
 		return user;
 	}
-
 }
